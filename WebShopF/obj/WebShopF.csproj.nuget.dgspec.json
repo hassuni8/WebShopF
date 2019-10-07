@@ -1,28 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/WebShopF/WebShopF.csproj": {}
+    "E:\\GitHub\\WebShopF\\WebShopF\\WebShopF.csproj": {}
   },
   "projects": {
-    "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/WebShopF/WebShopF.csproj": {
+    "E:\\GitHub\\WebShopF\\WebShopF\\WebShopF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/WebShopF/WebShopF.csproj",
+        "projectUniqueName": "E:\\GitHub\\WebShopF\\WebShopF\\WebShopF.csproj",
         "projectName": "WebShopF",
-        "projectPath": "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/WebShopF/WebShopF.csproj",
-        "packagesPath": "/Users/Hassuni/.nuget/packages/",
-        "outputPath": "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/WebShopF/obj/",
+        "projectPath": "E:\\GitHub\\WebShopF\\WebShopF\\WebShopF.csproj",
+        "packagesPath": "C:\\Users\\Christian\\.nuget\\packages\\",
+        "outputPath": "E:\\GitHub\\WebShopF\\WebShopF\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/Hassuni/.config/NuGet/NuGet.Config"
+          "C:\\Users\\Christian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -86,16 +88,10 @@
             }
           },
           "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
+            "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+          "warn": true
         }
       }
     }
