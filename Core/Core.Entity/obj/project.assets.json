@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Hassuni/Projects/WebShopF/Core/Core.Entity/Core.Entity.csproj",
+      "projectUniqueName": "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/Core/Core.Entity/Core.Entity.csproj",
       "projectName": "Core.Entity",
-      "projectPath": "/Users/Hassuni/Projects/WebShopF/Core/Core.Entity/Core.Entity.csproj",
+      "projectPath": "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/Core/Core.Entity/Core.Entity.csproj",
       "packagesPath": "/Users/Hassuni/.nuget/packages/",
-      "outputPath": "/Users/Hassuni/Projects/WebShopF/Core/Core.Entity/obj/",
+      "outputPath": "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/Core/Core.Entity/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

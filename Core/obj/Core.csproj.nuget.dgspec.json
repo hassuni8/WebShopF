@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/Hassuni/Projects/WebShopF/Core/Core.csproj": {}
+    "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/Core/Core.csproj": {}
   },
   "projects": {
-    "/Users/Hassuni/Projects/WebShopF/Core/Core.csproj": {
+    "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/Core/Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Hassuni/Projects/WebShopF/Core/Core.csproj",
+        "projectUniqueName": "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/Core/Core.csproj",
         "projectName": "Core",
-        "projectPath": "/Users/Hassuni/Projects/WebShopF/Core/Core.csproj",
+        "projectPath": "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/Core/Core.csproj",
         "packagesPath": "/Users/Hassuni/.nuget/packages/",
-        "outputPath": "/Users/Hassuni/Projects/WebShopF/Core/obj/",
+        "outputPath": "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/Core/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
