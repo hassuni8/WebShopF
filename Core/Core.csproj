@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="ApplicationServices\" />
+    <Folder Include="ApplicationServices\Services\" />
+    <Folder Include="DomainServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="ApplicationServices\Services\Fruit.cs" />
+    <Compile Remove="ApplicationServices\IFruit.cs" />
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+</Project>
