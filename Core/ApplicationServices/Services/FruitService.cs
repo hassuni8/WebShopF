@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Core.DomainServices;
 using Core.Entity;
 
@@ -33,6 +35,11 @@ namespace Core.ApplicationServices.Services
             return _fruitRepo.DeleteFruit(id);
         }
 
-        
+        public List<Fruit> GetFruit()
+        {
+            return _fruitRepo.GetFruit().ToList();
+        }
+
+
     }
 }

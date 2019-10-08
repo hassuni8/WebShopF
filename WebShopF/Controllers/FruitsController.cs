@@ -20,7 +20,10 @@ namespace WebShopF.Controllers
             _fruitService = fruitService;
         }
 
-
+        public ActionResult<IEnumerable<Fruit>> Get()
+        {
+            return Ok(_fruitService.GetFruit());
+        }
 
         // GET api/values/5
         [HttpGet("{id}")]
