@@ -11,6 +11,24 @@ namespace Infrastructure.SQL
         {
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Customer>()
+                .HasMany(Co => Co.Orders)
+                .WithOne(o => o.Customer)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<Order>()
+                .HasOne(o => o.Customer)
+                .WithMany(co => co.Orders)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<Order>().HasMany(o => o.fruitsInOrder);
+
+        }
+
 
 
 

@@ -8,8 +8,9 @@ namespace Core.Entity
         public int Id { get; set; }
         public DateTime OrderDate { get; set; }
         public DateTime DeliveryDate { get; set; }
-        //public List<Fruit> ListOFruits { get; set; }
-        //public Customer Customer { get; set; }
+        
+        public Customer Customer { get; set; }
        
+        public List<Fruit> fruitsInOrder { get; set; }
     }
 }

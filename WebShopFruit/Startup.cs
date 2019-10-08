@@ -84,7 +84,7 @@ namespace WebShopFruit
                 else
                 {
                     context.Database.EnsureCreated();
-                   // DBInitializer.Initialize(context);
+                    DBInitializer.Initialize(context);
                     app.UseHsts();
                 }
             }

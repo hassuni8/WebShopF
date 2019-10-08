@@ -29,7 +29,7 @@ namespace WebShopFruit.Controllers
 
 
         // GET: api/Customer/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}")]
         public ActionResult<Customer> Get(int id)
         {
             if (id < 1) return BadRequest("Id has to be higher than 1");
@@ -65,7 +65,7 @@ namespace WebShopFruit.Controllers
             {
                 return BadRequest("Id must be the same as fruit Id");
             }
-            return Ok("Fruit with id: " + id + " has been deleted");
+            return Ok("Customer with id: " + id + " has been deleted");
         }
     }
 }

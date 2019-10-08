@@ -27,9 +27,8 @@ namespace Infrastructure.SQL.Repositories
 
         public Customer ReadyById(int id)
         {
-            return _ctx.Customers
-                .Include(c => c.Id)
-                .FirstOrDefault(c => c.Id == id);
+            return _ctx.Customers.FirstOrDefault(c => c.Id == id);
+
         }
 
         public List<Customer> ReadAll()

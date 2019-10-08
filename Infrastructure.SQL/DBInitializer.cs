@@ -48,9 +48,24 @@ namespace Infrastructure.SQL
 
             };
 
+            Customer cus1 = new Customer
+            {
+                FirstName = "Per",
+                LastName =  "Person",
+                Address = "nej gade",
+                Id = 1,
+                Orders = new List<Order>()
+                
+            };
+
+            cus1.Orders.Add(order1);
+
+            
+
             fruit1 = ctx.Add(fruit1).Entity;
             fruit2 = ctx.Add(fruit2).Entity;
             order1 = ctx.Add(order1).Entity;
+            cus1 = ctx.Add(cus1).Entity;
 
             ctx.SaveChanges();
         }
