@@ -48,8 +48,10 @@ namespace WebShopFruit
 
             services.AddScoped<IFruitRepo, FruitRepos>();
             services.AddScoped<IFruitService, FruitService>();
-            services.AddScoped<ICustomerRepo, Cuo>();
+            services.AddScoped<ICustomerRepo, CustomerRepo>();
             services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<IOrderRepo, OrderRepo>();
+            services.AddScoped<IOrderService, OrderService>();
 
 
 

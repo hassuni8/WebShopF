@@ -17,7 +17,7 @@ namespace WebShopFruit.Controllers
         }
 
 
-
+        [HttpGet]
         public ActionResult<IEnumerable<Fruit>> Get()
         {
             return Ok(_fruitService.GetFruit());

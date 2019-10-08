@@ -10,11 +10,12 @@ namespace Infrastructure.SQL
         public FruitContext(DbContextOptions opt): base(opt)
         {
         }
-        
-        
-        
-        
+
+
+
+
         public DbSet<Fruit> Fruits { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Order> Orders { get; set; }
     }
 }

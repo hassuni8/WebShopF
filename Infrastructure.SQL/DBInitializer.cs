@@ -37,8 +37,20 @@ namespace Infrastructure.SQL
 
             };
 
+            Order order1 = new Order
+            {
+
+                Id = 3,
+                DeliveryDate = DateTime.Now,
+                OrderDate = DateTime.Now
+                
+               
+
+            };
+
             fruit1 = ctx.Add(fruit1).Entity;
             fruit2 = ctx.Add(fruit2).Entity;
+            order1 = ctx.Add(order1).Entity;
 
             ctx.SaveChanges();
         }
