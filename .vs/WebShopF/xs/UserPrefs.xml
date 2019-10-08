@@ -1,15 +1,39 @@
 ﻿<Properties StartupConfiguration="{EF719904-4CC0-4A2B-B6F1-B945B651C335}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Core.Entity/Fruit.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebShopF/Controllers/FruitsController.cs">
     <Files>
-      <File FileName="Core/Core.Entity/Fruit.cs" Line="1" Column="1" />
+      <File FileName="WebShopF/Startup.cs" Line="75" Column="35" />
+      <File FileName="Infrastructure.SQL/DBInitializer.cs" />
+      <File FileName="Infrastructure.SQL/FruitContext.cs" />
+      <File FileName="Core/Core.Entity/Fruit.cs" />
+      <File FileName="Infrastructure.SQL/Repositories/FruitRepos.cs" Line="1" Column="1" />
+      <File FileName="Core/DomainServices/IFruitRepo.cs" Line="1" Column="1" />
+      <File FileName="Core/ApplicationServices/Services/FruitService.cs" Line="1" Column="1" />
+      <File FileName="Core/ApplicationServices/IFruitService.cs" Line="1" Column="1" />
+      <File FileName="WebShopF/Controllers/FruitsController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="WebShopF" expanded="True">
             <Node name="Core" expanded="True">
-              <Node name="Core.Entity" expanded="True">
-                <Node name="Fruit.cs" selected="True" />
+              <Node name="Core" expanded="True">
+                <Node name="ApplicationServices" expanded="True">
+                  <Node name="Services" expanded="True" />
+                </Node>
+                <Node name="DomainServices" expanded="True" />
+              </Node>
+              <Node name="Core.Entity" expanded="True" />
+            </Node>
+            <Node name="Infrastructure" expanded="True">
+              <Node name="Infrastructure.SQL" expanded="True">
+                <Node name="Repositories" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="UI" expanded="True">
+              <Node name="WebShopF" expanded="True">
+                <Node name="Controllers" expanded="True">
+                  <Node name="FruitsController.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
