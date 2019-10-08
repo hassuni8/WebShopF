@@ -352,3 +352,9 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+Infrastructure.SQL/obj/Debug/netcoreapp2.1/Infrastructure.SQL.csprojAssemblyReference.cache
+Core/Core.Entity/obj/Debug/netcoreapp2.1/Core.Entity.csprojAssemblyReference.cache
+.idea/.idea.WebShopF/.idea/workspace.xml
+.idea/.idea.WebShopF/.idea/contentModel.xml
+*.xml
+*.cache

@@ -34,12 +34,17 @@ namespace WebShopF
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors();
+            services.AddDbContext<FruitContext>(opt =>
+                opt.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
+
+           // services.AddDbContext<FruitContext>(opt => opt.UseSqlite("Data Source = FruitShopDB.db"));
+            
 
             services.AddScoped<IFruitRepo, FruitRepos>();
-            services.AddDbContext<FruitContext>(opt => opt.UseSqlite("Data Source = FruitShopDB.db"));
+           
 
             services.AddScoped<IFruitService, FruitService>();
+            ;
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddMvc().AddJsonOptions(opt =>
