@@ -22,7 +22,7 @@ namespace WebShopFruit
 {
     public class Startup
     {
-        Startup(IConfiguration configuration, IHostingEnvironment env)
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
             Configuration = configuration;
             Environment = env;

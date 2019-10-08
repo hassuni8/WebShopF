@@ -29,7 +29,7 @@ namespace Infrastructure.SQL
 
                 Price = 275.0,
                 Name = "test",
-                Id = 1,
+                Id = 2,
                 // allergens = new List<string>(),
                 Amount = 7,
                 Contents = "test2",
