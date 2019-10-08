@@ -46,10 +46,12 @@ namespace WebShopFruit
 
 
             services.AddScoped<IFruitRepo, FruitRepos>();
+            services.AddScoped<IOrderRepo, OrderRepo>();
 
 
             services.AddScoped<IFruitService, FruitService>();
-            ;
+            services.AddScoped<IOrderService, OrderService>();
+            
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddMvc().AddJsonOptions(opt =>
