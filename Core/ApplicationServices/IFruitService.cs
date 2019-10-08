@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Core.Entity;
 
 namespace Core.ApplicationServices
@@ -9,5 +10,6 @@ namespace Core.ApplicationServices
         Fruit ReadFruit(int id);
         Fruit UpdateFruit(Fruit fruitToUpdate);
         Fruit DeleteFruit(int id);
+        List<Fruit> GetFruit();
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Core.DomainServices;
 using Core.Entity;
@@ -46,6 +47,12 @@ namespace Infrastructure.SQL.Repositories
         {
             return _fruitContext.Fruits
                 .FirstOrDefault(f => f.Id == id);
+        }
+
+        public IEnumerable<Fruit> GetFruit()
+        {
+            return _fruitContext.Fruits;
+                
         }
     }
 }
