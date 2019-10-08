@@ -1,4 +1,5 @@
 ﻿
+using System.Collections.Generic;
 using Core.ApplicationServices;
 using Core.Entity;
 using Microsoft.AspNetCore.Mvc;
@@ -16,6 +17,11 @@ namespace WebShopFruit.Controllers
         }
 
 
+
+        public ActionResult<IEnumerable<Fruit>> Get()
+        {
+            return Ok(_fruitService.GetFruit());
+        }   
 
         // GET api/values/5
         [HttpGet("{id}")]
