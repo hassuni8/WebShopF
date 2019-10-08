@@ -8,6 +8,7 @@
     <Folder Include="Repositories\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Core.Entity\Core.Entity.csproj" />
     <ProjectReference Include="..\Core\Core.csproj" />
   </ItemGroup>
   <ItemGroup>

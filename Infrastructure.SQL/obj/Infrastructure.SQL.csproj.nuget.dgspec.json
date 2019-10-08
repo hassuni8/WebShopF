@@ -1,28 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/Infrastructure.SQL/Infrastructure.SQL.csproj": {}
+    "E:\\GitHub\\WebShopF\\Infrastructure.SQL\\Infrastructure.SQL.csproj": {}
   },
   "projects": {
-    "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/Core/Core.csproj": {
+    "E:\\GitHub\\WebShopF\\Core.Entity\\Core.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/Core/Core.csproj",
-        "projectName": "Core",
-        "projectPath": "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/Core/Core.csproj",
-        "packagesPath": "/Users/Hassuni/.nuget/packages/",
-        "outputPath": "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/Core/obj/",
+        "projectUniqueName": "E:\\GitHub\\WebShopF\\Core.Entity\\Core.Entity.csproj",
+        "projectName": "Core.Entity",
+        "projectPath": "E:\\GitHub\\WebShopF\\Core.Entity\\Core.Entity.csproj",
+        "packagesPath": "C:\\Users\\Christian\\.nuget\\packages\\",
+        "outputPath": "E:\\GitHub\\WebShopF\\Core.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/Hassuni/.config/NuGet/NuGet.Config"
+          "C:\\Users\\Christian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -47,45 +49,100 @@
             }
           },
           "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
+            "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+          "warn": true
         }
       }
     },
-    "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/Infrastructure.SQL/Infrastructure.SQL.csproj": {
+    "E:\\GitHub\\WebShopF\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/Infrastructure.SQL/Infrastructure.SQL.csproj",
-        "projectName": "Infrastructure.SQL",
-        "projectPath": "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/Infrastructure.SQL/Infrastructure.SQL.csproj",
-        "packagesPath": "/Users/Hassuni/.nuget/packages/",
-        "outputPath": "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/Infrastructure.SQL/obj/",
+        "projectUniqueName": "E:\\GitHub\\WebShopF\\Core\\Core.csproj",
+        "projectName": "Core",
+        "projectPath": "E:\\GitHub\\WebShopF\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\Christian\\.nuget\\packages\\",
+        "outputPath": "E:\\GitHub\\WebShopF\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/Hassuni/.config/NuGet/NuGet.Config"
+          "C:\\Users\\Christian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/Core/Core.csproj": {
-                "projectPath": "/Users/Hassuni/Documents/GitHub/PetShopHassuni/WebShopF/Core/Core.csproj"
+              "E:\\GitHub\\WebShopF\\Core.Entity\\Core.Entity.csproj": {
+                "projectPath": "E:\\GitHub\\WebShopF\\Core.Entity\\Core.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "E:\\GitHub\\WebShopF\\Infrastructure.SQL\\Infrastructure.SQL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\GitHub\\WebShopF\\Infrastructure.SQL\\Infrastructure.SQL.csproj",
+        "projectName": "Infrastructure.SQL",
+        "projectPath": "E:\\GitHub\\WebShopF\\Infrastructure.SQL\\Infrastructure.SQL.csproj",
+        "packagesPath": "C:\\Users\\Christian\\.nuget\\packages\\",
+        "outputPath": "E:\\GitHub\\WebShopF\\Infrastructure.SQL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Christian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "E:\\GitHub\\WebShopF\\Core.Entity\\Core.Entity.csproj": {
+                "projectPath": "E:\\GitHub\\WebShopF\\Core.Entity\\Core.Entity.csproj"
+              },
+              "E:\\GitHub\\WebShopF\\Core\\Core.csproj": {
+                "projectPath": "E:\\GitHub\\WebShopF\\Core\\Core.csproj"
               }
             }
           }
@@ -123,16 +180,10 @@
             }
           },
           "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
+            "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+          "warn": true
         }
       }
     }
