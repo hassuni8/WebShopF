@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Core.ApplicationServices;
 using Core.ApplicationServices.Services;
 using Core.DomainServices;
+using Core.Entity;
 using Infrastructure.SQL;
 using Infrastructure.SQL.Repositories;
 using Microsoft.AspNetCore.Builder;
@@ -46,10 +47,11 @@ namespace WebShopFruit
 
 
             services.AddScoped<IFruitRepo, FruitRepos>();
-
-
             services.AddScoped<IFruitService, FruitService>();
-            ;
+            services.AddScoped<ICustomerRepo, Cuo>();
+            services.AddScoped<ICustomerService, CustomerService>();
+
+
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddMvc().AddJsonOptions(opt =>
@@ -80,7 +82,7 @@ namespace WebShopFruit
                 else
                 {
                     context.Database.EnsureCreated();
-                    DBInitializer.Initialize(context);
+                   // DBInitializer.Initialize(context);
                     app.UseHsts();
                 }
             }

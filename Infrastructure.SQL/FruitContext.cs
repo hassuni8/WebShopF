@@ -15,5 +15,6 @@ namespace Infrastructure.SQL
         
         
         public DbSet<Fruit> Fruits { get; set; }
+        public DbSet<Customer> Customers { get; set; }
     }
 }
