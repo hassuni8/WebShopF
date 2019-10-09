@@ -41,8 +41,10 @@ namespace Infrastructure.SQL.Repositories
 
         public Order ReadById(int id)
         {
-            return _fruitContext.Orders
+            return _fruitContext.Orders.Include( o => o.Customer)
+                .Include(o => o.fruitsInOrder)
                 .FirstOrDefault(o => o.Id == id);
+                
         }
 
         public Order UpdateOrder(Order OrderToUpdate)
@@ -54,5 +56,7 @@ namespace Infrastructure.SQL.Repositories
             _fruitContext.SaveChanges();
             return OrderToUpdate;
         }
+
+
     }
 }
