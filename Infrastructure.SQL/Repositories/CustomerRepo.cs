@@ -33,7 +33,7 @@ namespace Infrastructure.SQL.Repositories
 
         public List<Customer> ReadAll()
         {
-            return _ctx.Customers.ToList();
+            return _ctx.Customers.Include(co => co.Orders).ToList();
         }
 
         public int Count()

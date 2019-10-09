@@ -8,7 +8,7 @@ namespace Infrastructure.SQL
     {
         public static void Initialize(FruitContext ctx)
         {
-            ctx.Database.EnsureDeleted();
+            
             ctx.Database.EnsureCreated();
 
             Fruit fruit1 = new Fruit
@@ -16,7 +16,7 @@ namespace Infrastructure.SQL
 
                 Price = 275.0,
                 Name = "test",
-                Id = 1,
+                
                 // allergens = new List<string>(),
                 Amount = 7,
                 Contents = "test2",
@@ -29,7 +29,7 @@ namespace Infrastructure.SQL
 
                 Price = 275.0,
                 Name = "test",
-                Id = 2,
+                
                 // allergens = new List<string>(),
                 Amount = 7,
                 Contents = "test2",
@@ -40,7 +40,7 @@ namespace Infrastructure.SQL
             Order order1 = new Order
             {
 
-                Id = 3,
+                
                 DeliveryDate = DateTime.Now,
                 OrderDate = DateTime.Now
                 
@@ -53,7 +53,6 @@ namespace Infrastructure.SQL
                 FirstName = "Per",
                 LastName =  "Person",
                 Address = "nej gade",
-                Id = 1,
                 Orders = new List<Order>()
                 
             };
