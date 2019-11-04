@@ -5,18 +5,16 @@ using System.Threading.Tasks;
 using Core.ApplicationServices;
 using Core.ApplicationServices.Services;
 using Core.DomainServices;
-using Core.Entity;
 using Infrastructure.SQL;
 using Infrastructure.SQL.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 
 namespace WebShopFruit
@@ -35,14 +33,35 @@ namespace WebShopFruit
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            Byte[] secretBytes = new byte[40];
+            Random rand = new Random();
+            rand.NextBytes(secretBytes);
+
+            // Add JWT based authentication
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateAudience = false,
+                    //ValidAudience = "TodoApiClient",
+                    ValidateIssuer = false,
+                    //ValidIssuer = "TodoApi",
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(secretBytes),
+                    ValidateLifetime = true, //validate the expiration and not before values in the token
+                    ClockSkew = TimeSpan.FromMinutes(5) //5 minute tolerance for the expiration date
+                };
+            });
+
+            services.AddCors();
+            
             if (Environment.IsDevelopment())
             {
                 services.AddDbContext<FruitContext>(opt => opt.UseSqlite("Data Source = FruitShopDB.db"));
             }
             else
             {
-                services.AddDbContext<FruitContext>(opt =>
-                    opt.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
+                services.AddDbContext<FruitContext>(opt => opt.UseSqlite("Data Source = FruitShopDB.db"));
             }
 
 
@@ -52,10 +71,13 @@ namespace WebShopFruit
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<IOrderRepo, OrderRepo>();
             services.AddScoped<IOrderService, OrderService>();
+           
 
+            services.AddTransient<IDbIn, DBInitializer>();
 
+            services.AddSingleton<IAuthenticationHelper>(new AuthenticationHelper(secretBytes));
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc();
             services.AddMvc().AddJsonOptions(opt =>
             {
                 opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
@@ -70,24 +92,23 @@ namespace WebShopFruit
             app.UseDeveloperExceptionPage();
             using (var scope = app.ApplicationServices.CreateScope())
             {
-                var context = scope.ServiceProvider
-                    .GetRequiredService<FruitContext>();
+                var services = scope.ServiceProvider;
+                var dbContext = services.GetService<FruitContext>();
+                var dbInitializer = services.GetService<IDbIn>();
+                dbInitializer.Initialize(dbContext);
+
 
 
                 if (env.IsDevelopment())
                 {
-                    context.Database.EnsureDeleted();
-                    context.Database.EnsureCreated();
-                    DBInitializer.Initialize(context);
                     app.UseDeveloperExceptionPage();
                 }
                 else
                 {
-                    context.Database.EnsureCreated();
-                    DBInitializer.Initialize(context);
                     app.UseHsts();
                 }
             }
+            
 
             app.UseHttpsRedirection();
 
