@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Core.DomainServices;
 using Core.Entity;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,8 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebShopFruit.Controllers
 {
-
-    [Route("/token")]
+    [Route("api/[controller]")]
     public class TokenController : Controller
     {
         private IUser<User> _repo;
@@ -27,7 +27,7 @@ namespace WebShopFruit.Controllers
 
         [HttpPost]
         public IActionResult Login([FromBody] LoginInputModel model)
-        {
+        {   Console.WriteLine("hej2");
             var user = _repo.getAll().FirstOrDefault(u => u.UserName == model.Username);
             if (user == null)
             {
@@ -38,6 +38,7 @@ namespace WebShopFruit.Controllers
             {
                 return Unauthorized();
             }
+            Console.WriteLine("nej");
             
             return Ok( 
                 new

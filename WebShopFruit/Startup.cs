@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Core.ApplicationServices;
 using Core.ApplicationServices.Services;
 using Core.DomainServices;
+using Core.Entity;
 using Infrastructure.SQL;
 using Infrastructure.SQL.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -53,7 +54,6 @@ namespace WebShopFruit
                 };
             });
 
-            services.AddCors();
             
             if (Environment.IsDevelopment())
             {
@@ -64,13 +64,15 @@ namespace WebShopFruit
                 services.AddDbContext<FruitContext>(opt => opt.UseSqlite("Data Source = FruitShopDB.db"));
             }
 
-
+            services.AddScoped<IUser<User>, UserRepo>();
             services.AddScoped<IFruitRepo, FruitRepos>();
             services.AddScoped<IFruitService, FruitService>();
             services.AddScoped<ICustomerRepo, CustomerRepo>();
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<IOrderRepo, OrderRepo>();
             services.AddScoped<IOrderService, OrderService>();
+            
+            
            
 
             services.AddTransient<IDbIn, DBInitializer>();
@@ -83,11 +85,26 @@ namespace WebShopFruit
                 opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
                 opt.SerializerSettings.MaxDepth = 2;
             });
+    
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin",
+                    builder => builder
+                        //.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()
+                        .WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod()
+                      
+                );
+            });
+            
         }
+        
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+
+            // Shows UseCors with named policy.
+            app.UseCors("AllowSpecificOrigin");
 
             app.UseDeveloperExceptionPage();
             using (var scope = app.ApplicationServices.CreateScope())
@@ -112,8 +129,8 @@ namespace WebShopFruit
 
             app.UseHttpsRedirection();
 
-            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-
+           // app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            app.UseAuthentication();
             app.UseMvc();
         }
     }
